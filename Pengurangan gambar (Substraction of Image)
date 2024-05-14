@@ -1,0 +1,17 @@
+"Substraction of Image"
+
+import cv2
+import numpy as np
+# path to input images are specified and 
+# # images are loaded with imread command 
+image1 = cv2.imread('btc12.jpg') # Gambar Bebas namun ukuran dan dimensi gambar harus sama jika tidak maka program tidak akan berjalan
+image2 = cv2.imread('btcc.jpg') # Gambar Bebas namun ukuran dan dimensi gambar harus sama jika tidak maka program tidak akan berjalan
+print(image1.shape, image1.size, image1.dtype)
+# cv2.addWeighted is applied over the # image inputs with applied parameters
+sub = cv2.subtract(image1, image2)
+#the window showing output image
+# with the weighted sum cv2.imshow('Imagel', image1)
+cv2.imshow('Subtracked Image', sub)
+# De-allocate any associated memory usage cv2.waitKey (0) cv2.destroyAllWindows ()
+cv2.waitKey(0)
+cv2.destroyAllWindows()
