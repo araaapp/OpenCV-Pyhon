@@ -1,0 +1,22 @@
+"Bitwise Operation on Images"
+
+import cv2 as cv
+import numpy as np
+
+img1 = cv.imread('image21.jpg') # Gambar bebas namun untuk ukuran dan dimensi gambar harus sama jika tidak program tidak akan berjalan
+img2 = cv.imread('image23.jpg') # Gambar bebas namun untuk ukuran dan dimensi gambar harus sama jika tidak program tidak akan berjalan
+
+dest_and = cv.bitwise_and(img2, img1, mask=None)
+dest_or = cv.bitwise_or(img2, img1, mask=None)
+dest_xor = cv.bitwise_xor(img2, img1, mask=None)
+dest_not1 = cv.bitwise_not(img1, img2, mask=None)
+dest_not2 = cv.bitwise_not(img2, img1, mask=None)
+
+cv.imshow('AND', dest_and)
+cv.imshow('OR', dest_or)
+cv.imshow('XOR', dest_xor)
+cv.imshow('NOT1', dest_not1)
+cv.imshow('NOT2', dest_not2)
+
+cv.waitKey()
+cv.destroyAllWindows()
