@@ -1,0 +1,17 @@
+## MENENTUKAN KOORDINAT RoI
+
+import cv2 as cv
+import numpy as np
+import matplotlib.pyplot as plt
+
+imgpath = "alam.jpg"
+img = cv.imread(imgpath)
+
+
+roi = img[210:280, 259:533]
+
+cv.namedWindow("Gambar alam", cv.WINDOW_NORMAL)
+cv.imshow("Gambar alam", img)
+cv.imshow("Hasil ROI", roi)
+cv.waitKey(0)
+cv.destroyAllWindows()
