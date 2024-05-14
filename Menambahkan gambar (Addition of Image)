@@ -1,0 +1,15 @@
+"Addition of Image"
+import cv2 as cv
+import numpy as np
+
+image1 = cv.imread('image5.jpg') # Gambar bebas namun harus memiliki ukuran dan dimensi gambar yang sama jika ukuran gambar tidak sama maka program tidak akan berjalan
+image2 = cv.imread('image6.jpg') # Gambar bebas namun harus memiliki ukuran dan dimensi gambar yang sama jika ukuran gambar tidak sama maka program tidak akan berjalan
+
+weightedSum = cv.addWeighted(image1, 0.5, image2, 0.4, 0)
+
+cv.imshow('Gambar 1', image1)
+cv.imshow('Gambar 2', image2)
+cv.imshow('Weighted Image', weightedSum)
+
+cv.waitKey(0)
+cv.destroyAllWindows()
