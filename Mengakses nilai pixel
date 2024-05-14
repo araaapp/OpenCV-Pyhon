@@ -1,0 +1,11 @@
+mport cv2 as cv
+
+img = cv.imread("nature.jpg", cv.IMREAD_COLOR)
+
+pxl = img[100,100]
+print(pxl)
+
+cv.imshow('image', img)
+
+cv.waitKey(0)
+cv.destroyAllWindows()
