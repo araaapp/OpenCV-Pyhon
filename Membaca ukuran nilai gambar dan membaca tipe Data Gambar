@@ -1,0 +1,19 @@
+
+import cv2 ## 1
+import numpy as np
+image1 = cv2.imread('image21.jpg')
+print (image1.shape,image1.size,image1.dtype)
+
+
+
+
+import cv2 ## 2
+
+img = cv2.imread("nature.jpg", cv2.IMREAD_COLOR)
+
+
+cv2.namedWindow('Gambar alam', cv2.WINDOW_NORMAL)
+cv2.imshow('Gambar alam', img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
